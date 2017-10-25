@@ -90,8 +90,8 @@ contains(names, 'Colt', function(result){
 
   //Code Here
   function uniq(names, cb) {
-    var unique = names.filter(function(elem, index, self) {
-      return index == self.indexOf(elem);
+    var unique = names.filter(function(elem, index, array) {
+      return index == array.indexOf(elem);
     })
     cb(unique);
   }
